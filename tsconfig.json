@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "target": "ES6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ]
+    },
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".gitignore",
+    "package.json",
+    "package-lock.json",
+    "tsconfig.json",
+    "LICENSE",
+    ".eslintrc.cjs",
+    "src/site/views",
+    "src/site/public/assets"
+  ]
+}

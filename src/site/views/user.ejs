@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <%- include('./partials/head'); %>
+</head>
+
+<body data-bs-theme="dark" class="hide-scrollbar">
+    <script>
+        AOS.init();
+    </script>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand nav-link" href="/">alt.finder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/#"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#aboutus">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#statics">Statics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="d-flex justify-content-center mt-2" action="" method="">
+                            <div class="input-group input-group-sm text-center w-80">
+                                <input name="search"  class="form-control rounded-start-pill" type="text" placeholder="Name or ID" autocomplete="off" required minlength="1" style="color: rgb(46, 46, 46);outline: none !important;border: none !important;">
+                                <select name="type"class="fw-bold text-center" style="border:none;color: rgb(99,99,99);" required>
+                                    <option value="user" selected="">User</option>
+                                    <option value="server">Server</option>
+                                </select><button class="btn btn-sm fw-bold text-white rounded-end-pill" type="submit" style="background: #0c051d;">.search</button></div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="content">
+        
+        <div class="top-bg"></div>
+
+        <div class="container">
+            <div class="profile">
+                <div class="row">
+
+                    <div class="col-lg-8 col-sm-12 justify-content-center d-flex">
+
+                        <!-- Na kompie -->
+                        <div class="profile-top position-absolute justify-content-center d-none d-lg-flex">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12 justify-content-center d-flex">
+                                    <div class="profile-avatar-bg">
+                                        <img src=<%= avatar %> class="profile-avatar">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-sm-12 d-none d-md-flex justify-content-center align-self-center text-center">
+                                    <h3 class="fw-bold"><%= user.username %><br /><span class="text-secondary"><%= user.id %></span></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Na telefonie -->
+                        <div class="profile-top2 position-absolute justify-content-center d-flex d-lg-none">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-12 col-sm-12 justify-content-center d-flex">
+                                    <div class="profile-avatar-bg">
+                                        <img src=<%= avatarPhone %> class="profile-avatar">
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-sm-12 align-self-center mt-3 text-center">
+                                    <h2 class="fw-bold"><%= user.username %><br><span class="text-muted"><%= user.id %></span></h2>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+
+                    <div class="col-lg-8 col-sm-12 on-mobile-top">
+                        <div class="profile-box mt-3">
+                            <div class="box-content p-2">
+                                account.username: <%= user.username %><br />
+                                account.discriminator: #<%= user.discriminator ? user.discriminator : `0000` %><br />
+                                account.created: <%= date %><br />
+                                account.badges: <%- badges %><br />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-12 profile-col-right position-relative mt-5 mt-lg-0">
+                        <div class="profile-box">
+                            <div class="status text-center">
+                                <% if(review === "positive") { %>
+                                    <span class="dot dot-success"></span>
+                                    <span class="fw-bold text-wh fs-4">positive</span>
+                                <% } else if(review === "negative") { %>
+                                        <span class="dot dot-danger"></span>
+                                        <span class="fw-bold text-wh fs-4">negative</span>
+                                <% } else { %>
+                                        <span class="dot dot-secondary"></span>
+                                        <span class="fw-bold text-wh fs-4">none</span>
+                                <% } %>
+                            </div>
+                            <hr>
+                            <div class="justify-content-center d-flex">
+                                <div id="chart"></div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="profile-box mt-2 align-items-center justify-content-center text-center d-flex h-50 mb-5">
+                        no.data
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" style="margin-top:150px;">
+        <div class="container-fluid">
+            <div class="row text-center mt-1">
+                <div class="col-12 box-footer">
+                    © 2023 alt.finder<br /><br />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

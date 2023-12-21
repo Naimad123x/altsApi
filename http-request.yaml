@@ -1,0 +1,33 @@
+swagger: "2.0"
+info:
+  title: alt.finder
+  description: alt.finder api
+  version: 1.0.0
+host: localhost:3000
+basePath: /api
+schemes:
+  - http
+paths:
+  /users/{userId}:
+    get:
+      summary: Get a user by ID
+      parameters:
+        - in: query
+          name: userId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+        - in: query
+          name: client
+          schema:
+            type: string
+          description: client id
+          required: true
+        - in: query
+          name: key
+          schema:
+            type: string
+          description: client key
+          required: true
+  

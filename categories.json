@@ -1,0 +1,42 @@
+{
+
+
+  "users": [
+    {
+      "category": "multi-account",
+      "enable": true
+    },
+    {
+      "category": "scam",
+      "enable": true
+    },
+    {
+      "category": "advertisement",
+      "enable": true
+    },
+    {
+      "category": "toxic",
+      "enable": true
+    },
+    {
+      "category": "",
+      "enable": false
+    }
+  ],
+
+
+  "servers": [
+    {
+      "category": "scam",
+      "enable": true
+    },
+    {
+      "category": "nsfw",
+      "enable": true
+    }
+  ]
+
+
+
+
+}

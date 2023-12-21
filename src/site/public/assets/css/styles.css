@@ -1,0 +1,268 @@
+textarea:hover, input:hover, textarea:active, input:active, textarea:focus, input:focus, button:focus, button:active, button:hover, label:focus, .btn:active, .btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+body {
+  font-family: Poppins !important;
+  background: #0c051d;
+}
+
+.hide-scrollbar{
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+  width: 100% !important;
+  background: #f0f0f00c;
+  border-bottom: 1px solid #ffffff13 !important;
+  backdrop-filter: saturate(120%) blur(50px);
+  z-index: 10000;
+}
+
+.navbar-animation {
+  position: absolute;
+  z-index: 100 !important;
+  top: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+a.active::before {
+  width: 80%;
+  bottom: 8px;
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 500 !important;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 0px;
+  margin: 0px 0px;
+  display: inline-block;
+  position: relative;
+  opacity: 0.75;
+  right: 0 !important;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  color: #ddd7d7 !important;
+}
+
+.nav-link:hover::before {
+  width: 80%;
+}
+
+.nav-link::before {
+  width: 0%;
+  bottom: 8px;
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background: linear-gradient(to left, #6f31ff, #6e30ff, #3b00c4);
+}
+
+.box {
+  background: #ffffff11;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #ffffff11;
+  backdrop-filter: saturate(180%) blur(20px);
+  transition: all 0.2s ease-in-out;
+}
+
+.box:hover {
+  margin-top: -10px;
+}
+
+.hero {
+  background: url(../img/background.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.counter {
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+.avatar {
+  border-radius: 100%;
+  width: 120px;
+  padding:3px;
+}
+
+.avatar-bg {
+  background: linear-gradient(to left, #6f31ff, #6e30ff, #3b00c4);
+  border-radius: 100%;
+  width: 120px;
+}
+
+.text-bg-primary {
+  background: linear-gradient(to left, #6f31ff, #6e30ff, #3b00c4);
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.navbar-maxwidth {
+  max-width: 90%;
+}
+
+.top-bg {
+  background: url(../img/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+.profile-top {
+  top: 12vh;
+  z-index: 100;
+}
+
+.profile-top2 {
+  top: 13vh;
+  z-index: 100;
+}
+
+
+.profile-avatar {
+  border-radius: 100%;
+  width: 180px;
+  padding:8px;
+}
+
+.profile-avatar-bg {
+  background: #289644;
+  border-radius: 100%;
+  width: 180px;
+}
+
+@media screen and (min-width: 1024px) {
+  .profile-col-right {
+    top: -30px;
+  }
+}
+
+.profile-box {
+  background: #15092e;;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #6323f81f;
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #6323f81f;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  content: "";
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 2px;
+}
+
+.dot-success {
+  background: #51d337;
+}
+
+.dot-danger {
+  background: #d34937;
+}
+
+.dot-secondary {
+  background: #7a7a7a;
+}
+
+g path {
+  stroke: none !important;
+}
+
+.ml7 {
+  position: relative;
+  font-size: 6vw;
+}
+.ml7 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+.ml7 .letter {
+  transform-origin: 0 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+@media screen and (max-width: 1024px) {
+  .on-mobile-top {
+    position: relative;
+    top: 10vh;
+  }
+  .profile-col-right {
+    top: 35px;
+  }
+
+  .ml7 {
+    font-size: 12vw;
+  }
+}
